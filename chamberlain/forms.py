@@ -3,7 +3,7 @@ import logging
 from django import  forms
 from django.contrib.auth.models import User
 import sys
-from chamberlain.models import Attendance
+from chamberlain.models import Attendance, MajorItem
 
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(levelname)s %(message)s ',
@@ -14,12 +14,14 @@ logging.basicConfig(level=logging.INFO,
                     ]
                     )
 
+
 class LoginForm(forms.Form):
     username = forms.CharField(label='使用者名稱')
     password = forms.CharField(label='使用者密碼', widget=forms.PasswordInput)
 
     # class Meta:
     #     model = User
+
 
 class UserRegistrationForm(forms.ModelForm):
     password = forms.CharField(label='請輸入密碼', widget=forms.PasswordInput)
@@ -49,3 +51,6 @@ class AttendanceForm(forms.ModelForm):
     class Meta:
         model = Attendance
         exclude =('user',)
+
+
+
