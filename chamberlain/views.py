@@ -2,6 +2,7 @@ import json
 import sys
 from datetime import datetime
 from django.contrib.auth import authenticate, login
+from django.contrib.sessions import serializers
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
@@ -11,6 +12,7 @@ from django.contrib.auth.models import User
 import logging
 
 # Create your views here.
+from chamberlain.models import MajorItem
 
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(levelname)s %(message)s ',
@@ -24,6 +26,13 @@ logging.basicConfig(level=logging.INFO,
 
 def index(request):
     return render(request, 'account/index.html')
+
+
+def dashboard(request):
+    request.session['user'] = request.user.id
+    return render(request,
+                  'account/dashboard.html',
+                  )
 
 
 def register(request):
@@ -63,8 +72,7 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    request.session['user'] = user.user_id
-                    return redirect('chamberlain:attendance')
+                    return redirect('chamberlain:index')
         else:
             logging.info(form.errors)
 
@@ -74,7 +82,7 @@ def user_login(request):
 
 
 def attendance_view(request):
-    user_id = request.session['user']
+    # user_id = request.session['user']
     form: AttendanceForm
     if request.method == 'POST':
         form = AttendanceForm(request.POST,{'user':user_id})
@@ -87,3 +95,9 @@ def attendance_view(request):
         #form = AttendanceForm(initial={'user_id': user_id})
         form = AttendanceForm({'user':user_id})
     return render(request, 'account/attendance.html', {'form': form})
+
+
+def major(request):
+    user_id = request.session['user']
+    items =  MajorItem.objects.all()
+    return render(request,'account/major.html',{'items':items} )

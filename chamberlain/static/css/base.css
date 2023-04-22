@@ -329,9 +329,10 @@ a.mbutton {
 }
 
 /*RWD table*/
+
 table, th, td {
 	border: 1px solid black;
-    width: auto;
+
 }
 
 #summary {
@@ -353,8 +354,8 @@ th {
 	border: 1px;
 	background-color: #72c472;
 	font-family: "Open Sans", Arial, sans-serif;
-	width:auto;
- 	font-size: 14px;
+	width:5%;
+ 	font-size: 16px;
  	color: #fcfcfc; text-align : center;
 
 }
@@ -363,14 +364,11 @@ th {
 td {
 	/* backgroud-color:#375687; */
 	font-family: "Open Sans", Arial, sans-serif;
- 	font-size: 14px;
-    width:auto;
-
-    color: black;
+ 	font-size: 16px;
+	color: black;
 	text-align : center;
 
 }
-
 
 /*額外做顏色，沒有什麼意義*/
 tr.tr-only-hide {color: #056801;}
@@ -405,10 +403,4 @@ tr.tr-only-hide {color: #056801;}
   /*當RWD縮小的時候.table-bordered 會有兩條線，所以針對.table-bordered去做修正*/
   .table-rwd.table-bordered td,.table-rwd.table-bordered th,.table-rwd.table-bordered{border:0;}
 
-}
-#content {
-    position:relative;
-    width:100%;
-    padding:30px 30px 30px 30px;
-    background: #38c5e2;
 }

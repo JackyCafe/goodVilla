@@ -1,18 +1,95 @@
 {% load static %}
 <head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
     <link href="{% static "css/base.css" %}" rel="stylesheet">
     <link href="{% static "css/style.css" %}" rel="stylesheet">
-    <link href="{% static "css/blog.css" %}" rel="stylesheet">
-    <title>
-
-    {% block title %}{% endblock %}
-
-    </title>
 
 
 </head>
 <body>
-            {% block content %}{% endblock %}
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">好好園館</a>
+    <button class="navbar-toggler" type="button"
+            data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <div class="navbar-nav .nav-pills mr-auto">
+            <li class="nav-item active"><h4>
+                <a class="nav-link" href="#">首頁 <span class="sr-only">(current)</span></a></h4>
+            </li>
+            <li class="nav-item"><h4>
+                <a class="nav-link" href="#">每日任務</a></h4>
+            </li>
+            <li class="nav-item"><h4>
+                <a class="nav-link" href="#">團隊任務</a></h4>
+            </li>
+            <li class="nav-item"><h4>
+                <a class="nav-link" href="#">懸賞任務</a></h4>
+            </li>
+            <li class="nav-item"><h4>
+                <a class="nav-link" href="#">工作任務</a></h4>
+            </li>
+
+            <li class="nav-item"><h4>
+                <a class="nav-link" href="#">我的點數</a>
+            </h4></li>
+            {#    </div>#}
+
+
+
+            {% if request.session.authority == 'admin' %}
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            住戶管理
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">住民註冊</a>
+                            <a class="dropdown-item" href="#">創建個人任務</a>
+
+
+                        </div>
+                    </li>
+                </ul>
+            {% endif %}
+
+        </div>
+        <span class="navbar-text">
+            <a href="#">{{ request.user }}</a>
+            </span>
+        <ul>
+            <span class="navbar-text">
+         <a href="#">登出</a>
+            </span>
+        </ul>
+    </div>
+
+</nav>
+
+{% block content %}
+{% endblock %}
+
 
 </body>
