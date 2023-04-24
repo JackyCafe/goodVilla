@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-    主要項目
+    細部項目
 {% endblock %}
 {% block content %}
     <div class="container text-center">
@@ -15,8 +15,9 @@
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">{{ item }}</h5>
-
-                    <a href="{% url 'chamberlain:detail' item.id %}" class="btn btn-primary">{{ item }}</a>
+                    <div class="card-body">
+                    <a href="{% url 'chamberlain:task_record' item.id %}" class="btn btn-primary">{{ item.detail }}</a>
+                    </div>
                 </div>
             </div>
             {% endfor %}

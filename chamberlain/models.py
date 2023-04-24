@@ -23,9 +23,9 @@ class DetailItem(models.Model):
 class Attendance(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_id')
     items = models.ForeignKey(DetailItem, on_delete=models.CASCADE,related_name='detail_item')
-    content = models.CharField(max_length=20,blank=False)
+    content = models.CharField(max_length=20,blank=True)
     start_time = models.DateTimeField(auto_created=True)
-    end_time = models.DateTimeField(auto_created=False, blank=True)
+    end_time = models.DateTimeField(auto_now=False, blank=True,null=True)
     spend_time = models.FloatField(default=0)
 
     def __str__(self):

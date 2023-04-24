@@ -1,4 +1,5 @@
 import logging
+from datetime import datetime
 
 from django import  forms
 from django.contrib.auth.models import User
@@ -41,11 +42,15 @@ class UserRegistrationForm(forms.ModelForm):
 class AttendanceForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(AttendanceForm,self).__init__()
-        # initial = kwargs.get("initial",{})
-        # user =initial.get('user_id')
-        # self.fields['user'].initial = user
-        # self.fields['user'].widget.attrs['disable'] = True
-        user = forms.CharField()
+        initial = kwargs.get("initial",{})
+        items = initial.get('items')
+        content = initial.get('content')
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'
+        self.fields['items'].initial = items
+        self.fields['content'].initial = content
+        self.fields['start_time'].initial = datetime.now()
+
         # logging.info(user)
 
     class Meta:

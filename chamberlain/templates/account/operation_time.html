@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+工時統計
+
+{% endblock %}
+
+    目前作業：
+    {{ task.items}}
+    {{ task.content }}
+
+    結束時間
+{% block content %}
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">{{ task.items }}</div>
+                </div>
+
+            </div>
+            <div class="card" style="width: 18rem;">
+                    <div class="card-title">{{ task.items }}</div>
+                    <div class="card-body">
+                        <br>{{ task.content }}
+                        <br> 開始時間:
+                        {{ task.start_time }}
+                        <br> 結束時間:
+                           <br> 作業正在執行中
+                           <a href="{%  url 'chamberlain:task_end' task.id %}" class="button-btn">結束作業</a>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
