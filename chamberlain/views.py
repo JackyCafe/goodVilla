@@ -1,13 +1,15 @@
 import json
 import sys
 from datetime import datetime, timezone
+
+from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.sessions import serializers
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
 
-from chamberlain.forms import UserRegistrationForm, LoginForm, AttendanceForm
+from chamberlain.forms import UserRegistrationForm, LoginForm, AttendanceForm, MajorForm
 from django.contrib.auth.models import User
 
 import logging
@@ -51,7 +53,7 @@ def register(request):
             password = user_form.cleaned_data['password']
             user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect('chamberlain:index')
+            return redirect('chamberlain:dashboard')
 
         else:
             return HttpResponse(user_form.errors)
@@ -119,16 +121,35 @@ def task_record(request, id):
     new_task.save()
     return render(request,'account/operation_time.html',{'task':new_task})
 
-    # form: AttendanceForm
-    # if request.method == 'POST':
-    #     form = AttendanceForm(request.POST)
-    #     if form.is_valid():
-    #         new_action = form.save()
-    #         logging(new_action)
-    #         # new_action.save()
-    #     else:
-    #         print(form.errors)
-    # else:
-    #     form = AttendanceForm(initial={'user': user_id, 'items': id, 'content': items.detail })
-    #
-    # return render(request, 'account/attendance.html', {'form': form})
+
+def report(request):
+    user = request.user
+    is_superuser = User.objects.get(id=user.id).is_superuser
+    if is_superuser:
+        reports = Attendance.objects.all()
+    else:
+        reports = Attendance.objects.filter(user_id=user.id)
+    return render(request,'account/report.html',{'reports':reports})
+
+
+
+
+def update_record(request,id):
+
+    attendance_form:AttendanceForm
+    if request.method =='POST':
+        data: Attendance = get_object_or_404(Attendance, id=id)
+        attendance_form = AttendanceForm(request.POST or None,instance=data,initial={'data':data})
+        logging.info(attendance_form.initial)
+        if attendance_form.is_valid():
+            attendance = attendance_form.save(commit=False)
+            logging.info(attendance)
+            attendance.save()
+            return redirect('chamberlain:report')
+        else:
+            attendance_form.errors
+    else:
+        data: Attendance = get_object_or_404(Attendance, id=id)
+        attendance_form = AttendanceForm(initial={'data':data})
+    return render(request,'account/update_form.html',{'form':attendance_form})
+

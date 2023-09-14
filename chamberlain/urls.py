@@ -32,4 +32,7 @@ urlpatterns = [
     path('detail/<int:id>/', views.detail, name='detail'),
     path('task_record/<int:id>', views.task_record, name='task_record'),
     path('task_end/<int:id>', views.task_end, name='task_end'),
+    path('report/',views.report,name='report'),
+    path('update_record/<int:id>', views.update_record, name='update_record'),
+
 ]

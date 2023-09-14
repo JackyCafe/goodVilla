@@ -35,12 +35,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <div class="navbar-nav .nav-pills mr-auto">
-            <li class="nav-item active"><h4>
-                <a class="nav-link" href="#">首頁 <span class="sr-only">(current)</span></a></h4>
-            </li>
+
             <li class="nav-item"><h4>
                 <a class="nav-link" href="{% url 'chamberlain:major' %}">作業紀錄</a></h4>
             </li>
+
+            <li class="nav-item"><h4>
+                <a class="nav-link" href="{% url 'chamberlain:register' %}">管家註冊</a></h4>
+            </li>
+            <li class="nav-item active"><h4>
+                <a class="nav-link" href="{% url 'chamberlain:report' %}">報表<span class="sr-only">(current)</span></a></h4>
+
+            </li>
+
             {#    </div>#}
 
 

@@ -40,22 +40,36 @@ class UserRegistrationForm(forms.ModelForm):
 
 
 class AttendanceForm(forms.ModelForm):
-    def __init__(self, *args, **kwargs):
-        super(AttendanceForm,self).__init__()
-        initial = kwargs.get("initial",{})
-        items = initial.get('items')
-        content = initial.get('content')
-        for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'form-control'
-        self.fields['items'].initial = items
-        self.fields['content'].initial = content
-        self.fields['start_time'].initial = datetime.now()
-
-        # logging.info(user)
+    def __init__(self,*args, **kwargs):
+        super(AttendanceForm,self).__init__(*args, **kwargs)
+        initial = kwargs.get('initial',{})
+        data:Attendance = initial.get('data')
+        self.fields['user'].initial=data.user
+        self.fields['items'].initial = data.items
+        self.fields['start_time'].initial = data.start_time
+        self.fields['end_time'].initial =data.end_time
+        self.fields['spend_time'].initial = data.spend_time
+        self.fields['content'].initial = data.content
 
     class Meta:
         model = Attendance
-        exclude =('user',)
+        fields ='__all__'
+        # exclude =('user',)
+    def save(self, commit=True):
 
+        obj:Attendance = super(AttendanceForm, self).save(commit=False)
+        obj.user = self.cleaned_data['user']
+        obj.start_time = self.cleaned_data['start_time']
+        obj.end_time = self.cleaned_data['end_time']
+        obj.items = self.cleaned_data['items']
+        obj.content = self.cleaned_data['content']
+        if commit:
+            obj.save()
+        return obj
+
+class MajorForm(forms.ModelForm):
+    class Meta:
+        model = MajorItem
+        fields = '__all__'
 
 

@@ -1,0 +1,627 @@
+2023-07-13 00:17 ERROR Internal Server Error: /update_record/17 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 148, in update_record
+    attendance_form = AttendanceForm(initial=data.__dict__)
+UnboundLocalError: local variable 'data' referenced before assignment
+2023-07-13 00:17 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 00:18 INFO True 
+2023-07-13 00:18 ERROR Internal Server Error: /update_record/17 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/http/response.py", line 134, in __init__
+    self.status_code = int(status)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'dict'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 143, in update_record
+    return HttpResponse(request,'account/dashboard.html',{'data':data})
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/http/response.py", line 384, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/http/response.py", line 136, in __init__
+    raise TypeError("HTTP status code must be an integer.")
+TypeError: HTTP status code must be an integer.
+2023-07-13 00:20 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 00:21 INFO True 
+2023-07-13 00:36 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 00:37 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 00:37 INFO True 
+2023-07-13 00:37 ERROR Internal Server Error: /update_record/23 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 145, in update_record
+    messages.Success(request, "You successfully updated the post")
+AttributeError: module 'django.contrib.messages' has no attribute 'Success'
+2023-07-13 00:38 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 00:38 INFO True 
+2023-07-13 00:38 INFO True 
+2023-07-13 00:39 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py changed, reloading. 
+2023-07-13 00:44 INFO True 
+2023-07-13 00:44 INFO True 
+2023-07-13 00:46 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 00:46 INFO True 
+2023-07-13 00:46 INFO 碎餐 
+2023-07-13 00:56 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py changed, reloading. 
+2023-07-13 00:56 INFO 碎餐 
+2023-07-13 00:56 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 152, in update_record
+    return render(request,'account/update_form.html',{'form':attendance_form})
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 914, in _resolve_lookup
+    current = current()
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/utils.py", line 84, in as_p
+    return self.render(self.template_name_p)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/utils.py", line 65, in render
+    renderer = renderer or self.renderer
+AttributeError: 'AttendanceForm' object has no attribute 'renderer'
+2023-07-13 00:58 INFO 碎餐 
+2023-07-13 00:58 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 152, in update_record
+    return render(request,'account/update_form.html',{'form':attendance_form})
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 914, in _resolve_lookup
+    current = current()
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/utils.py", line 84, in as_p
+    return self.render(self.template_name_p)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/utils.py", line 65, in render
+    renderer = renderer or self.renderer
+AttributeError: 'AttendanceForm' object has no attribute 'renderer'
+2023-07-13 00:59 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py changed, reloading. 
+2023-07-13 00:59 INFO 碎餐 
+2023-07-13 00:59 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 152, in update_record
+    return render(request,'account/update_form.html',{'form':attendance_form})
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 914, in _resolve_lookup
+    current = current()
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/utils.py", line 84, in as_p
+    return self.render(self.template_name_p)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/utils.py", line 65, in render
+    renderer = renderer or self.renderer
+AttributeError: 'AttendanceForm' object has no attribute 'renderer'
+2023-07-13 01:00 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py changed, reloading. 
+2023-07-13 01:00 INFO 碎餐 
+2023-07-13 01:00 INFO 碎餐 
+2023-07-13 01:01 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py changed, reloading. 
+2023-07-13 01:01 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 151, in update_record
+    attendance_form = AttendanceForm(initial={'data':data})
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py", line 47, in __init__
+    self.cleaned_data['user'].initial=data.user
+AttributeError: 'AttendanceForm' object has no attribute 'cleaned_data'
+2023-07-13 01:01 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 151, in update_record
+    attendance_form = AttendanceForm(initial={'data':data})
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py", line 47, in __init__
+    self.cleaned_data['user'].initial=data.user
+AttributeError: 'AttendanceForm' object has no attribute 'cleaned_data'
+2023-07-13 01:02 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py changed, reloading. 
+2023-07-13 01:02 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py changed, reloading. 
+2023-07-13 01:02 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 152, in update_record
+    return render(request,'account/update_form.html',{'form':attendance_form})
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 914, in _resolve_lookup
+    current = current()
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/utils.py", line 84, in as_p
+    return self.render(self.template_name_p)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/utils.py", line 75, in render
+    return mark_safe(renderer.render(template, context))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/renderers.py", line 29, in render
+    return template.render(context, request=request).strip()
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/utils/html.py", line 420, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/boundfield.py", line 34, in __str__
+    return self.as_widget()
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/boundfield.py", line 94, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/boundfield.py", line 269, in build_widget_attrs
+    widget.use_required_attribute(self.initial)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/boundfield.py", line 263, in initial
+    return self.form.get_initial_for_field(self.field, self.name)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/forms.py", line 522, in get_initial_for_field
+    value = value()
+TypeError: create_reverse_many_to_one_manager.<locals>.RelatedManager.__call__() missing 1 required keyword-only argument: 'manager'
+2023-07-13 01:02 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 152, in update_record
+    return render(request,'account/update_form.html',{'form':attendance_form})
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 914, in _resolve_lookup
+    current = current()
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/utils.py", line 84, in as_p
+    return self.render(self.template_name_p)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/utils.py", line 75, in render
+    return mark_safe(renderer.render(template, context))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/renderers.py", line 29, in render
+    return template.render(context, request=request).strip()
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/utils/html.py", line 420, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/boundfield.py", line 34, in __str__
+    return self.as_widget()
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/boundfield.py", line 94, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/boundfield.py", line 269, in build_widget_attrs
+    widget.use_required_attribute(self.initial)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/boundfield.py", line 263, in initial
+    return self.form.get_initial_for_field(self.field, self.name)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/forms.py", line 522, in get_initial_for_field
+    value = value()
+TypeError: create_reverse_many_to_one_manager.<locals>.RelatedManager.__call__() missing 1 required keyword-only argument: 'manager'
+2023-07-13 01:03 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 152, in update_record
+    return render(request,'account/update_form.html',{'form':attendance_form})
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 914, in _resolve_lookup
+    current = current()
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/utils.py", line 84, in as_p
+    return self.render(self.template_name_p)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/utils.py", line 75, in render
+    return mark_safe(renderer.render(template, context))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/renderers.py", line 29, in render
+    return template.render(context, request=request).strip()
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/template/base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/utils/html.py", line 420, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/boundfield.py", line 34, in __str__
+    return self.as_widget()
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/boundfield.py", line 94, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/boundfield.py", line 269, in build_widget_attrs
+    widget.use_required_attribute(self.initial)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/boundfield.py", line 263, in initial
+    return self.form.get_initial_for_field(self.field, self.name)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/forms/forms.py", line 522, in get_initial_for_field
+    value = value()
+TypeError: create_reverse_many_to_one_manager.<locals>.RelatedManager.__call__() missing 1 required keyword-only argument: 'manager'
+2023-07-13 01:03 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py changed, reloading. 
+2023-07-13 01:04 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py changed, reloading. 
+2023-07-13 01:05 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py changed, reloading. 
+2023-07-13 01:05 INFO False 
+2023-07-13 01:05 INFO False 
+2023-07-13 01:05 INFO False 
+2023-07-13 01:07 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 01:07 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 142, in update_record
+    logging.info(attendance_form.errors())
+TypeError: 'ErrorDict' object is not callable
+2023-07-13 01:08 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 01:08 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 141, in update_record
+    attendance_form = AttendanceForm(request.POST or None,initial={'data':data})
+UnboundLocalError: local variable 'data' referenced before assignment
+2023-07-13 01:09 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 141, in update_record
+    attendance_form = AttendanceForm(request.POST or None,initial={'data':data})
+UnboundLocalError: local variable 'data' referenced before assignment
+2023-07-13 01:10 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 01:10 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 143, in update_record
+    logging.info(attendance_form.errors())
+TypeError: 'ErrorDict' object is not callable
+2023-07-13 01:18 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 01:18 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 142, in update_record
+    attendance_form = AttendanceForm(request.POST or None)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py", line 47, in __init__
+    self.fields['user'].initial=data.user
+AttributeError: 'NoneType' object has no attribute 'user'
+2023-07-13 01:18 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 01:20 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 142, in update_record
+    attendance_form = AttendanceForm(request.POST or None,)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py", line 47, in __init__
+    self.fields['user'].initial=data.user
+AttributeError: 'NoneType' object has no attribute 'user'
+2023-07-13 01:21 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 01:21 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 142, in update_record
+    attendance_form = AttendanceForm(request.POST or None,instance=data)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/forms.py", line 47, in __init__
+    self.fields['user'].initial=data.user
+AttributeError: 'NoneType' object has no attribute 'user'
+2023-07-13 01:22 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 01:22 ERROR Internal Server Error: /update_record/28 
+Traceback (most recent call last):
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py", line 143, in update_record
+    logging.info(attendance_form.errors())
+TypeError: 'ErrorDict' object is not callable
+2023-07-13 01:22 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 01:22 INFO  
+2023-07-13 01:22 INFO  
+2023-07-13 01:23 INFO /Users/yhlin/yhWorkspace/PycharmProjects/goodVilla/chamberlain/views.py changed, reloading. 
+2023-07-13 01:23 INFO {'id': 28, 'start_time': datetime.datetime(2023, 7, 11, 2, 18, tzinfo=datetime.timezone.utc), 'user': 7, 'items': 1, 'content': '碎餐', 'end_time': datetime.datetime(2023, 7, 11, 2, 18, tzinfo=datetime.timezone.utc), 'spend_time': 30.0, 'data': <Attendance: 碎餐>} 
+2023-07-13 01:23 INFO 碎餐 
+2023-07-13 01:23 INFO {'id': 28, 'start_time': datetime.datetime(2023, 7, 11, 2, 18, tzinfo=datetime.timezone.utc), 'user': 7, 'items': 1, 'content': '碎餐', 'end_time': datetime.datetime(2023, 7, 11, 2, 18, tzinfo=datetime.timezone.utc), 'spend_time': 30.1, 'data': <Attendance: 碎餐>} 
+2023-07-13 01:23 INFO 碎餐 
+2023-07-13 01:23 INFO {'id': 28, 'start_time': datetime.datetime(2023, 7, 11, 2, 18, tzinfo=datetime.timezone.utc), 'user': 7, 'items': 1, 'content': '碎餐', 'end_time': datetime.datetime(2023, 7, 11, 2, 18, tzinfo=datetime.timezone.utc), 'spend_time': 30.2, 'data': <Attendance: 碎餐>} 
+2023-07-13 01:23 INFO 碎餐 
+2023-07-13 15:02 WARNING Not Found: /favicon.ico 

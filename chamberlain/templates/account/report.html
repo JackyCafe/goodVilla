@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}
+    報表
+{% endblock %}
+{% block content %}
+    <table class="table">
+      <thead>
+
+        <tr>{%  if not request.user.is_superuser %}
+
+            <th scope="col">#</th>
+            {% endif %}
+            <th scope="col">姓名</th>
+            <th scope="col">作業</th>
+            <th scope="col">起始時間</th>
+            <th scope="col">結束時間</th>
+            <th scope="col">工時</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for report in reports %}
+      <tr>
+         {%  if not request.user.is_superuser %}
+          <td><a href="{% url 'chamberlain:update_record' report.id%}" class="btn btn-primary">更正</a>
+</td>    {% endif %}
+          <td>{{ report.user.first_name }}（{{ report.user.username }}）</td>
+          <td>{{ report.content }}</td>
+          <td>{{ report.start_time }}</td>
+          <td>{{ report.end_time }}</td>
+          <td>{{ report.spend_time }}</td>
+        </tr>
+    {% endfor %}
+      </tbody>
+    </table>
+
+
+{% endblock %}
